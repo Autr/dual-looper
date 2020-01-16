@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "Source.h"
 #include "Video.h"
 
 class ofApp;
@@ -22,10 +21,12 @@ class ofApp : public ofBaseApp{
 		void mouseEntered(int x, int y);
 		void mouseExited(int x, int y);
 		void windowResized(int w, int h);
+        void setVideoPositionFromMouse( int x, int y );
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
         shared_ptr<ofApp> otherApp;
         string name;
+    
         ofxFlex::Video video;
 		
 };

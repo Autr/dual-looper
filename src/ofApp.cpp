@@ -24,11 +24,11 @@ void ofApp::keyPressed(int key){
         video.setPositionAsFloat( 0.0 );
         otherApp->video.setPositionAsFloat( 0 );
     }
-    if (key == 't' ) {
-        ofLogNotice("ofApp") << "testing end loop point";
-        video.setPositionAsFloat( 0.98 );
-        otherApp->video.setPositionAsFloat( 0.98 );
-    }
+//    if (key == 't' ) {
+//        ofLogNotice("ofApp") << "testing end loop point";
+//        video.setPositionAsFloat( 0.98 );
+//        otherApp->video.setPositionAsFloat( 0.98 );
+//    }
     if (key == OF_KEY_RIGHT ) {
         float a = video.getPositionAsFloat() + 0.1;
         while (a > 1) a -= 1.0;
@@ -57,14 +57,20 @@ void ofApp::mouseMoved(int x, int y ){
 
 }
 
+void ofApp::setVideoPositionFromMouse( int x, int y ) {
+    float pos = ofMap( x , 0 , ofGetWidth(), 0 , 1);
+    video.setPositionAsFloat( pos);
+    otherApp->video.setPositionAsFloat( pos );
+}
+
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-
+    setVideoPositionFromMouse( x, y);
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+    setVideoPositionFromMouse( x, y);
 }
 
 //--------------------------------------------------------------

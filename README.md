@@ -8,6 +8,4 @@ _f_ - toggle window to fullscreen
 
 _r_ - reset both videos to start
 
-_t_ - test end points (sets both to 98% on timline)
-
-_left/right_ - skip back and forth
+_mouse_ - move timeline
