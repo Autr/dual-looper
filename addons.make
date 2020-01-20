@@ -1,2 +1,2 @@
-ofxHAPAVPlayer
 ofxFlex
+ofxHAPAVPlayer

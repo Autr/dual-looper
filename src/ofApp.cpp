@@ -2,7 +2,8 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    ofSetDataPathRoot("../Resources/data/");
+    ofAppGLFWWindow* win = dynamic_cast<ofAppGLFWWindow *> (ofGetWindowPtr());
 }
 
 //--------------------------------------------------------------
